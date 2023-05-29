@@ -65,7 +65,7 @@ li {
   position: sticky;
   justify-content: space-between;
   padding: 20px;
-  height: fit-content;
+  height: 200px;
 }
 
 .navbar-links {
@@ -93,13 +93,60 @@ li {
 
 .home {
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
+.hero {
+  position: relative;
+  height: 700px; /* Adjust the height as needed */
+  width: 100%;
+  color: #ffffff; /* Text color */
+  text-shadow: 2px 2px black;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("./images/Poly.jpg");
+  background-size: cover;
+  backdrop-filter: blur(8px); /* Apply the blur filter to the background */
+  -webkit-backdrop-filter: blur(8px); /* For Safari */
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./images/Poly.jpg");
+  background-size: cover;
+  filter: blur(8px); /* Apply the blur filter to the pseudo-element */
+  -webkit-filter: blur(8px);
+  z-index: -1;
+}
+
+#progLogoHero {
+  margin-right: 20px;
+  width: 500px;
+  height: 500px;
+  filter: none;
+}
+
+.hero-head {
+  margin-top: -60px;
+  font-size: 40px;
+}
+
+
 
 .homeContent {
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-grow: 1;
+  flex-grow: 4;
 }
 
 #standings {
@@ -108,6 +155,7 @@ li {
   clear: both;
   float: left;
   text-align: center;
+  width: 30%;
 }
 
 /* Standings Table */
@@ -115,6 +163,10 @@ li {
 .table {
   border-collapse: collapse;
   width: fit-content;
+}
+
+.table-head {
+  text-align: left;
 }
 
 .table-header {
