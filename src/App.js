@@ -5,8 +5,6 @@ import Duelists from "./pages/Duelists.js";
 import Stats from "./pages/Stats.js";
 import Videos from "./pages/Videos.js";
 
-import './styles/App.css';
-
 import Header from "./components/Header.js"
 import Footer from "./components/Footer.js"
 
